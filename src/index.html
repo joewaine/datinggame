@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    </head>
+    <body>
+
+
+<h1><i class="em em-blue_heart"></i> friending game <i class="em em-blue_heart"></i></h1>
+
+<button onclick="getPlayerName()">Click this Button To Start Playing!</button>
+
+
+
+<br>
+<div id="namebox"></div>
+
+
+<!-- pick some of your favorite hobbies: -->
+<div id="hobbies"></div>
+
+
+<div id="friendSelect" class="hidden">
+    <i>how many friends would you like to choose from?</i>
+    <br>
+<select id="sel" onchange=''>
+ <option disabled selected value> -- select an option -- </option>
+  <option value='3'>Three</option>
+  <option value='4'>Four</option>
+  <option value='5'>Five</option>
+  <option value='6'>Six</option>
+  <option value='7'>Seven</option>
+  <option value='8'>Eight</option>
+  <option value='9'>Nine</option>
+</select>
+</div>
+
+
+
+
+
+
+
+
+<h3 id="selectionsTitle" class="hidden">your selections:</h3>
+<div id="yourSelections"></div>
+
+
+
+
+<div id="compatibility-center">
+
+
+</div>
+
+
+
+
+
+
+<button id="startOver" class="startover hidden" onclick="startOver()">startover</button>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
