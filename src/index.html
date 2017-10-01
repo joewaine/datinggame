@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>friendCrush</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,9 +18,9 @@
     <body>
 
 
-<h1><i class="em em-blue_heart"></i> friending game <i class="em em-blue_heart"></i></h1>
+<h1><i class="em em-blue_heart"></i> friendCrush <i class="em em-blue_heart"></i></h1>
 
-<button onclick="getPlayerName()">Click this Button To Start Playing!</button>
+<button id="startGameButton" onclick="getPlayerName()" class="">Click this Button To Start Playing!</button>
 
 
 
@@ -28,13 +28,21 @@
 <div id="namebox"></div>
 
 
-<!-- pick some of your favorite hobbies: -->
-<div id="hobbies"></div>
+<div id="contestants"></div>
+
+
+<div id="hobbies">
+
+
+
+
+</div>
+
 
 
 <div id="friendSelect" class="hidden">
-    <i>how many friends would you like to choose from?</i>
-    <br>
+    <h2><i>how many friends would you like to choose from?</i></h2>
+
 <select id="sel" onchange=''>
  <option disabled selected value> -- select an option -- </option>
   <option value='3'>Three</option>
@@ -67,10 +75,13 @@
 
 
 
-
+<div id="crushModal" class="hidden"></div>
 
 
 <button id="startOver" class="startover hidden" onclick="startOver()">startover</button>
+
+
+<button id="currentCrushes" onclick="showCurrentCrushes()">current crushes</button>
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/main.js"></script>

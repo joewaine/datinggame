@@ -297,6 +297,8 @@ button {
 body{
     text-align: center;
     background-color: #e7ffe7;
+    position: relative;
+
 }
 
 li{
@@ -335,20 +337,20 @@ li{
 
 .fadeOut{
     opacity: 0;
-    /*height: 0;*/
 }
-
 
 .contestant-box{
     padding: 10px;
     margin: 10px;
     background: #adfff0;
     width: 100px;
-    float: left;
+    display: inline-block;
+    width: 200px;
+    /*height: 200px;*/
 }
 
 #startOver{
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left: 20px;
 }
@@ -366,10 +368,10 @@ li{
 
 .randomContestant{
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     background: #c1e2c5;
-    width: 100px;
-    float: left;
+    width: 60px;
+    display: inline-block;
 }
 
 .contestantPool{
@@ -393,22 +395,129 @@ select#sel, select#sel {
    font-size: inherit;
    margin: 20px;
    overflow: hidden;
-   padding: 5px 10px;
+   padding: 10px;
    text-overflow: ellipsis;
    white-space: nowrap;
    width: 300px;
 }
 
 
+button.modalCrushes{
+  width: 100%;
+  padding: 5px 5px 10px 5px;
+  margin: 8px auto 0px;
+}
+
+
 select#sel {
-   color: #fff;
-   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
-   background-color: #779126;
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   padding-left: 15px;
+    color: #fff;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#d4e4a3, #bfa1b7 40%, #822691);
+    background-color: #779126;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+#crushModal{
+    margin: 0 auto;
+    text-align: left;
+    background-color: #f1ff81;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    height: 500px;
+    padding: 20px 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px;
+    text-align: center;
+
+}
+
+.randomContestant img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.modalUsr{
+    border: 3px solid pink;
+    width: 200px;
 }
 
 
 
+#currentCrushes{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.contestant-box button{
+  padding: 8px;
+}
+
+#crushModal p{
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.close{
+      position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.alreadyCrushing{
+width: 200px;
+margin: 0 auto;
+text-align: center;
+padding: 20px;
+}
+
+#startGameButton, #currentCrushes, .pink, .alreadyCrushing{
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+
+}
+
+.alreadyCrushing{
+
+}
+
+.profileDescription{
+  width: 80%;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: left;
+  color: #5f5f7d;
+}
+
+
+h1,h2,h3{
+      color: #5f5f7d;
+}
+#crushModal .randomContestant{
+    width: 160px;
+
+}
+
+#yourSelections{
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #3f8186;
+    font-style: italic;
+}
+
+
+@-webkit-keyframes greenPulse {
+  from { background-color: pink; -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: violet; -webkit-box-shadow: 0 0 18px #91bd09; }
+  to { background-color: pink; -webkit-box-shadow: 0 0 9px #333; }
+}
